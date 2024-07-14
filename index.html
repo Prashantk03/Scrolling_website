@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./img/stars.png" id="stars">
+        <img src="./img/moon.png" id="moon">
+        <img src="./img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Mountain</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="./img/mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec">
+        <h2>CLASS SESSION</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ad, possimus rem expedita laboriosam quaerat Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto doloremque autem illo voluptatibus libero accusamus, voluptates molestiae officiis tempore cumque minima quas nisi amet corporis veniam? Eligendi quod nesciunt quo, molestiae rerum eaque odio vel earum rem culpa ab non explicabo quidem nam. Exercitationem eveniet est mollitia inventore aliquid. Sed delectus officia maiores. Saepe voluptatibus deleniti accusamus sunt laboriosam? Molestias voluptatum excepturi enim ab sed voluptatibus architecto quibusdam odit odio.
+            tempora quo modi eveniet ex inventore! Quibusdam minima odio cupiditate quaerat, pariatur optio expedita
+            architecto quidem! Dolorem alias dolores at ex suscipit mollitia repellat facere. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error assumenda labore mollitia unde ducimus totam
+            dolorum iste, eveniet voluptatum facere laborum esse doloremque aperiam reiciendis tenetur temporibus fuga,
+            eaque, non animi tempore incidunt quidem. Aut earum numquam molestiae ex, veritatis voluptates laudantium
+            natus atque explicabo quaerat libero nihil, iusto dolorum sequi voluptatibus suscipit, quam ducimus. <br>
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.getElementById('header');
+        
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.50 + 'px';
+            moon.style.top = value * 0.50 + 'px';
+            mountains_behind.style.top = value * 0.50 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
